@@ -17,7 +17,10 @@ class Calculator:
                
              
     def multiply(self,a,b):
-        return a*b
+        try:
+            return a*b
+        except Exception as e:
+             print(e)
     
     def divide(self,a,b):
         try:
