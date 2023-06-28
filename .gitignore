@@ -1,0 +1,9 @@
+.conda
+.vscode
+_pycache_/
+*.pyc
+*.Ink
+.json
+.venv
+.env
+/_pycache_
