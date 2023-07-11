@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import logging
 import json
-from Project_1.Scripts.data_generator.publisher import Publisher
+from Project_1.devices.data_generator.publisher import Publisher
 
 class Generation:
     def simulation_a():
@@ -13,7 +13,7 @@ class Generation:
             return:returns the randomly generated numbers in json string format every 10 secs """
         try:
             while True:
-                df = pd.read_csv('scripts/energy_parameters.csv')
+                df = pd.read_csv('devices/energy_parameters.csv')
                 df['random_numbers'] = df.apply(lambda x: np.random.uniform(x.lower_limit, x.upper_limit), axis=1)
                 df = df.iloc[:,[0,3]]
                 df = df.to_json(orient = 'records')
@@ -30,8 +30,8 @@ class Generation:
             return:returns the randomly generated numbers in json string format every 10 secs """
         try:
             while True:
-                df = pd.read_csv('scripts/speed_parameters.csv')
-                df['random_numbers'] = df.apply(lambda x: np.random.uniform(x.lower_limit, x.upper_limit), axis=1)
+                df = pd.read_csv('devices/speed_parameters.csv')
+                df['random_parameters'] = df.apply(lambda x: np.random.uniform(x.lower_limit, x.upper_limit), axis=1)
                 df = df.iloc[:,[0,3]]
                 df = df.to_json(orient = 'records')
                 df = json.loads(df)

@@ -1,4 +1,4 @@
-from Project_1.fastapi.DB.db import base,engine
+from Project_1.generators.DB.db import base,engine
 from sqlalchemy import Column,Float,TIMESTAMP
 print("Creating database ....")
 class postgres(base):

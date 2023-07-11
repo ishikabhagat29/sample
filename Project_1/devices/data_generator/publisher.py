@@ -1,5 +1,5 @@
 import logging
-from Project_1.fastapi.services.services import item
+from Project_1.generators.services.services import item
 import paho.mqtt.client as mqtt
 
 class Publisher():

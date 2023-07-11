@@ -1,9 +1,9 @@
 import typer
-from Scripts.data_generator.data_generator import Generation
+from devices.data_generator.data_generator import Generation
 import paho.mqtt.client as mqtt
-from Scripts.data_generator.subscriber import Subscriber
+from devices.data_generator.subscriber import Subscriber
 import logging
-from Scripts.data_generator.publisher import Publisher
+from devices.data_generator.publisher import Publisher
 
 app = typer.Typer()
 

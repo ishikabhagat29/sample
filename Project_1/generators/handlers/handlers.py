@@ -1,11 +1,11 @@
 import logging
-from Project_1.fastapi.DB.createdb import postgres
-from Project_1.fastapi.DB.db import SessionLocal
+from Project_1.generators.DB.createdb import postgres
+from Project_1.generators.DB.db import SessionLocal
 import json
 from fastapi import APIRouter
 from datetime import datetime
 import pandas as pd
-from fastapi.DB.db import engine
+from generators.DB.db import engine
 from fastapi.responses import FileResponse
 db=SessionLocal()
 user = APIRouter()

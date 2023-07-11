@@ -1,4 +1,4 @@
-from Project_1.fastapi.handlers.handlers import handling
+from Project_1.generators.handlers.handlers import handling
 import logging
 from fastapi import APIRouter
 user = APIRouter()
