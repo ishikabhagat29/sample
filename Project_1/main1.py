@@ -9,6 +9,8 @@ app = typer.Typer()
 
 @app.command()
 def number_a(file: str = typer.Argument(..., help="Function to run")):
+    """A function to start the simulation of device a
+       return: it prints the randomly generated parameters by device a"""
     try:
         Generation.simulation_a()
     except Exception as e:
@@ -17,6 +19,8 @@ def number_a(file: str = typer.Argument(..., help="Function to run")):
 
 @app.command()
 def number_b(file: str = typer.Argument(..., help="Function to run")):
+    """A function to start the simulation of device b
+       return: it returns the randomly generated parameters by device b"""
     try:
         Generation.simulation_b()
     except Exception as e:
@@ -25,6 +29,8 @@ def number_b(file: str = typer.Argument(..., help="Function to run")):
 
 @app.command()
 def subscriber_a(file: str = typer.Argument(..., help="Function to run")):
+    """A function to start the subscriber a
+       return": it returns the status of the connection with the connection code"""
     try:
         client = mqtt.Client()
         client.on_connect = Subscriber.on_connect_a
@@ -37,6 +43,8 @@ def subscriber_a(file: str = typer.Argument(..., help="Function to run")):
 
 @app.command()
 def subscriber_b(file: str = typer.Argument(..., help="Function to run")):
+    """A function to start the subscriber b
+       return: it returns the status of connection with connection code"""
     try:
         client = mqtt.Client()
         client.on_connect = Subscriber.on_connect_b
